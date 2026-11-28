@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Checkout | Bean Boutique
+  </title>
+  <meta content="Discover thoughtfully sourced coffee, brewing tools and coffee experiences at Bean Boutique." name="description"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+ </head>
+ <body class="">
+  <header class="site-header">
+   <a aria-label="Bean Boutique home" class="brand" href="index.html">
+    <span class="brand-mark">
+     BB
+    </span>
+    <span class="brand-name">
+     BEAN
+     <i>
+      BOUTIQUE
+     </i>
+     <small>
+      COFFEE &bull; CRAFT &bull; COMMUNITY
+     </small>
+    </span>
+   </a>
+   <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">
+    ☰
+   </button>
+   <nav aria-label="Main navigation" class="main-nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="CoffeeSelection.html">
+     Coffee
+    </a>
+    <a href="BrewingEquips.html">
+     Equipment
+    </a>
+    <a href="EventsWorkshops.html">
+     Experiences
+    </a>
+    <a href="SpecialOffers.html">
+     Subscriptions
+    </a>
+   </nav>
+   <div class="header-actions">
+    <a aria-label="Your profile" class="icon-link" href="Profile.html">
+     ♙
+    </a>
+    <a class="bag-link" href="Cart.html">
+     Bag
+     <span class="bag-count" id="bagCount">
+      0
+     </span>
+    </a>
+   </div>
+  </header>
+  <main>
+   <section class="simple-page-head">
+    <p class="eyebrow">
+     One step closer
+    </p>
+    <h1>
+     Almost
+     <em>
+      yours.
+     </em>
+    </h1>
+    <p>
+     Enter your details to complete this demonstration order.
+    </p>
+   </section>
+   <section class="section checkout-layout">
+    <form class="form-card checkout-form" id="checkoutForm">
+     <h2>
+      Delivery details
+     </h2>
+     <div class="field-grid">
+      <label>
+       First name
+       <input name="firstName" required=""/>
+      </label>
+      <label>
+       Last name
+       <input name="lastName" required=""/>
+      </label>
+     </div>
+     <label>
+      Email address
+      <input name="email" required="" type="email"/>
+     </label>
+     <label>
+      Address
+      <input name="address" required=""/>
+     </label>
+     <div class="field-grid">
+      <label>
+       City
+       <input name="city" required=""/>
+      </label>
+      <label>
+       Postcode
+       <input name="postcode" required=""/>
+      </label>
+     </div>
+     <label>
+      Delivery notes
+      <span class="optional">
+       (optional)
+      </span>
+      <textarea name="notes" rows="3"></textarea>
+     </label>
+     <h2 class="payment-title">
+      Payment information
+     </h2>
+     <div class="payment-method-heading">
+      <span class="payment-card-icon">
+       ▣
+      </span>
+      <div>
+       <b>
+        Credit or debit card
+       </b>
+       <small>
+        Visa &middot; Mastercard &middot; American Express
+       </small>
+      </div>
+      <span class="payment-secure">
+       🔒 Secure form
+      </span>
+     </div>
+     <label>
+      Name on card
+      <input autocomplete="cc-name" name="cardName" placeholder="Name as shown on card" required=""/>
+     </label>
+     <label>
+      Card number
+      <input autocomplete="cc-number" id="cardNumber" inputmode="numeric" maxlength="19" name="cardNumber" placeholder="1234 5678 9012 3456" required=""/>
+     </label>
+     <div class="field-grid">
+      <label>
+       Expiry date
+       <input autocomplete="cc-exp" id="cardExpiry" inputmode="numeric" maxlength="7" name="expiry" placeholder="MM / YY" required=""/>
+      </label>
+      <label>
+       Security code (CVV)
+       <input autocomplete="cc-csc" id="cardCvv" inputmode="numeric" maxlength="4" name="cvv" placeholder="123" required=""/>
+      </label>
+     </div>
+     <div class="billing-note">
+      <span>
+       &checkmark;
+      </span>
+      <p>
+       <b>
+        Billing address
+       </b>
+       <small>
+        We'll use the delivery address entered above for this demonstration.
+       </small>
+      </p>
+     </div>
+     <label class="check-label">
+      <input required="" type="checkbox"/>
+      I confirm my delivery and payment details are correct.
+     </label>
+     <button class="btn btn-copper btn-full" type="submit">
+      Pay securely &middot;
+      <span id="payButtonTotal">
+       &pound;0.00
+      </span>
+      &nearrow;
+     </button>
+     <p class="payment-disclaimer">
+      Front-end prototype only. Card details are validated in your browser for demonstration and are never sent to a payment provider or saved.
+     </p>
+    </form>
+    <aside class="summary-card">
+     <p class="eyebrow">
+      A quick recap
+     </p>
+     <h2>
+      Your order
+     </h2>
+     <div id="checkoutItems">
+     </div>
+     <div class="summary-line summary-total">
+      <span>
+       Total
+      </span>
+      <b id="checkoutTotal">
+       &pound;0.00
+      </b>
+     </div>
+    </aside>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-top">
+    <div>
+     <a class="brand brand-light" href="index.html">
+      <span class="brand-mark">
+       BB
+      </span>
+      <span class="brand-name">
+       BEAN
+       <i>
+        BOUTIQUE
+       </i>
+       <small>
+        COFFEE &bull; CRAFT &bull; COMMUNITY
+       </small>
+      </span>
+     </a>
+     <p>
+      Good coffee. Thoughtfully sourced.
+      <br/>
+      Made to bring people together.
+     </p>
+    </div>
+    <div>
+     <h4>
+      Explore
+     </h4>
+     <a href="CoffeeSelection.html">
+      Our coffee
+     </a>
+     <a href="BrewingEquips.html">
+      Brew equipment
+     </a>
+     <a href="EventsWorkshops.html">
+      Workshops
+     </a>
+    </div>
+    <div>
+     <h4>
+      Visit &amp; connect
+     </h4>
+     <p>
+         22 Bogyoke Street, Yangon
+     </p>
+     <a href="mailto:hello@beanboutique.com.mm">
+      hello@beanboutique.com.mm
+     </a>
+     <a href="https://www.instagram.com/" rel="noopener" target="_blank">
+      Instagram &nearrow;
+     </a>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <span>
+     &copy; 2026 Bean Boutique Coffee House
+    </span>
+    <span>
+     Small batches. Big feeling.
+    </span>
+   </div>
+  </footer>
+  <script defer="" src="script.js">
+  </script>
+ </body>
+</html>
